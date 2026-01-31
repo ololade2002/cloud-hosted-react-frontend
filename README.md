@@ -43,7 +43,7 @@ The application is served over HTTPS using CloudFront’s default certificate.
 ##  Screenshots
 
 ### AWS Architecture
-![AWS Architecture](docs/architecture/architecture2.png)
+![AWS Architecture](docs/screenshots/architecture-2.png)
 
 ### CloudFront Distribution
 ![CloudFront Distribution](docs/screenshots/cloudfront-general.png)
