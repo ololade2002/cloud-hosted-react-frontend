@@ -4,6 +4,9 @@
 A responsive frontend dashboard built with React and deployed on AWS using a secure static hosting architecture.  
 The project demonstrates real-world frontend deployment using Amazon S3 and CloudFront.
 
+## 🌐 Live Demo
+- CloudFront URL: https://dpe727uwn94wi.cloudfront.net/
+
 ## Tech Stack
 **Frontend**
 - Vite
