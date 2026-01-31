@@ -49,7 +49,7 @@ The application is served over HTTPS using CloudFront’s default certificate.
 ![CloudFront Distribution](docs/screenshots/cloudfront-general.png)
 
 ### CloudFront Origin Configuration
-![CloudFront Origin](docs/screenshots/cloudfront-origins.png)
+![CloudFront Origin](docs/screenshots/cloudfront-origin.png)
 
 ### S3 Bucket Permissions (Private)
 ![S3 Permissions](docs/screenshots/s3-permission.jpeg)
