@@ -1,16 +1,79 @@
-# React + Vite
+# Cloud-Hosted React Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A responsive frontend dashboard built with React and deployed on AWS using a secure static hosting architecture.  
+The project demonstrates real-world frontend deployment using Amazon S3 and CloudFront.
 
-Currently, two official plugins are available:
+## Tech Stack
+**Frontend**
+- Vite
+- React
+- Tailwind CSS
+- shadcn/ui
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Cloud / DevOps**
+- Amazon S3 (private bucket)
+- Amazon CloudFront (CDN)
+- Origin Access Control (OAC)
+- CloudFront default HTTPS
 
-## React Compiler
+**Tools**
+- Git & GitHub
+- VS Code
+- AWS Management Console
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+##  AWS Architecture
+User traffic is routed through Amazon CloudFront, which serves as the public entry point and CDN.  
+CloudFront securely fetches static assets from a private S3 bucket using Origin Access Control (OAC).  
+The application is served over HTTPS using CloudFront’s default certificate.
 
-## Expanding the ESLint configuration
+##  Features
+- Responsive dashboard UI
+- Secure static hosting on AWS
+- CDN-backed content delivery
+- Private S3 bucket (no public access)
+- HTTPS enabled by default
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Deployment
+- Build frontend locally using Vite
+- Upload production build (`dist/`) to Amazon S3
+- Serve content through CloudFront
+- Invalidate CloudFront cache after deployment
+
+##  Screenshots
+
+### AWS Architecture
+![AWS Architecture](docs/architecture/architecture2.png)
+
+### CloudFront Distribution
+![CloudFront Distribution](docs/screenshots/cloudfront-general.png)
+
+### CloudFront Origin Configuration
+![CloudFront Origin](docs/screenshots/cloudfront-origins.png)
+
+### S3 Bucket Permissions (Private)
+![S3 Permissions](docs/screenshots/s3-permission.jpeg)
+
+### Live Application
+![Live App](docs/screenshots/app-live.png)
+
+
+## 💰 Cost
+This project runs within AWS Free Tier limits for S3 and CloudFront under light usage.  
+No paid services were required during development.
+
+## 🎯 Purpose
+This project was built to practice:
+- Deploying a frontend application on AWS
+- Understanding CDN-based architectures
+- Securing S3 using CloudFront OAC
+- Documenting real cloud projects professionally
+
+## 🔮 Future Improvements
+- Add custom domain with ACM
+- Introduce CI/CD with GitHub Actions
+- Improve caching policies
+- Add backend API integration
+
+## 🧑‍💻 Author
+Eleja Ololade
