@@ -37,11 +37,28 @@ The application is served over HTTPS using CloudFront’s default certificate.
 - Private S3 bucket (no public access)
 - HTTPS enabled by default
 
+##  CI/CD Pipeline (GitHub Actions)
+
+This project uses **GitHub Actions** to automate deployment to AWS.
+
+### How it works
+On every push to the `main` branch:
+1. GitHub Actions installs dependencies
+2. Builds the React application using Vite
+3. Uploads the production build (`dist/`) to the S3 bucket
+4. Invalidates the CloudFront cache so updates are served immediately
+
+### Benefits
+- No manual uploads to S3
+- Consistent and repeatable deployments
+- Faster iteration on UI changes
+
 ##  Deployment
 - Build frontend locally using Vite
 - Upload production build (`dist/`) to Amazon S3
 - Serve content through CloudFront
-- Invalidate CloudFront cache after deployment
+- CloudFront cache is invalidated automatically on each deployment
+
 
 ##  Screenshots
 
@@ -61,22 +78,21 @@ The application is served over HTTPS using CloudFront’s default certificate.
 ![Live App](docs/screenshots/app-live.png)
 
 
-## 💰 Cost
+##  Cost
 This project runs within AWS Free Tier limits for S3 and CloudFront under light usage.  
 No paid services were required during development.
 
-## 🎯 Purpose
+##  Purpose
 This project was built to practice:
 - Deploying a frontend application on AWS
 - Understanding CDN-based architectures
 - Securing S3 using CloudFront OAC
 - Documenting real cloud projects professionally
 
-## 🔮 Future Improvements
+##  Future Improvements
 - Add custom domain with ACM
-- Introduce CI/CD with GitHub Actions
 - Improve caching policies
 - Add backend API integration
 
-## 🧑‍💻 Author
+## Author
 Eleja Ololade
