@@ -2,7 +2,7 @@
 import './App.css'
 import Calendar from './components/AppCalendar'
 import CoursesTable from './components/CoursesTable'
-import Header from './components/header'
+import Header from './components/Header'
 import StatsCard from './components/StatsCard'
 import TaskProgress from './components/TaskProgress'
 import TimeSpendingBar from './components/TimeSpendingBar'
