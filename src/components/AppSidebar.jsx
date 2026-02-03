@@ -62,7 +62,7 @@ const AppSidebar = () => {
       <div className="bg-bgLightPurple font-raleway  flex flex-col items-center justify-center px-4 pt-10 pb-6 rounded-tl-2xl rounded-tr-2xl text-center">
         <h2 className=" font-bold text-[20px]">Dayly for Mobile</h2>
         <p className="text-gray-600 text-[13px] pb-10">Get everything in your phone now.</p>
-        <button className="text-white w-full py-3 rounded-lg font-medium bg-bgPurple">Download now</button>
+        <button className="text-white w-full py-3 rounded-lg hover:bg-[#5d53cf] font-medium bg-bgPurple">Download now</button>
       </div>
     </Sidebar>
   )
