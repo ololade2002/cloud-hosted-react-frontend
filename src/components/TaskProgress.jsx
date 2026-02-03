@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { taskData } from "@/dashboardData/data"
-import ProgressRing from "@/components/ProgressRing"
+import ProgressRing from "./ProgressRing"
 
 export default function TaskProgress() {
   const [selectedId, setSelectedId] = useState(taskData[0]?.id)
